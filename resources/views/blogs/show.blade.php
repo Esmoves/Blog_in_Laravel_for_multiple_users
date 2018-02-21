@@ -1,4 +1,4 @@
-@extends ('layout')
+@extends ('layouts.master')
 @section ('content')
 	<h1>Show one blog.</h1>
 	<main role="main" class="container">

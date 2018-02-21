@@ -21,7 +21,7 @@ class CreateBlogsTable extends Migration
             $table->text('body');
             $table->string('image');
             $table->boolean('hidden')->default(false);
-            $table->timestamp('datum');
+            $table->timestamps();
         });
         Schema::create('bloggers', function(Blueprint $table){
             $table->increments('id');
@@ -31,7 +31,7 @@ class CreateBlogsTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->boolean('hidden')->default(false);
-            $table->timestamp('datum');
+            $table->timestamps();
         });
     
     }
