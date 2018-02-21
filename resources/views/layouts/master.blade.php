@@ -4,12 +4,12 @@
 	<title>Blog</title>
 </head>
 <body>
-	@include('layout.htmlheader')
-	@include('layout.nav')
+	@include('layouts.htmlheader')
+	@include('layouts.nav')
 
 	@yield('content')
 	
-	@include('layout.footer')
+	@include('layouts.footer')
 
 </body>
 </html>
