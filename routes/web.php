@@ -2,7 +2,7 @@
 
 Route::get('/', 'BlogsController@index');
 
-//Route::get('/blogs/{id}', 'BlogsController@show');
+Route::get('/blogs/{blog}', 'BlogsController@show');
 
 Route::get('/blogs/create', 'BlogsController@create');
 
