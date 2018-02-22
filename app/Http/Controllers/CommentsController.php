@@ -8,19 +8,26 @@ use App\Blog;
 
 use App\Comment;
 
+
 class CommentsController extends Controller
 {
     
 	public function store(Blog $blog)
 	{
+		$this->validate(request(), [ 
+                'body' => 'required|min:2',
+                'user_id' => 'required'
+            ]);
 
-		Comment::create([
-			'blog_id' => $blog->id,
-			'user_id' => request('user_id'),
-			'body' => request('body')
-		]);
+            $comment = new Comment;
 
-		return back();
+            $comment->blog_id = $blog->id;
+            $comment->user_id = request()->user_id;
+        	$comment->body = request()->body;
+
+            $comment->save();
+            
+        	return back();
 
 	}
 

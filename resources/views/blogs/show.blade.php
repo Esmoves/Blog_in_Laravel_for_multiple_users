@@ -51,11 +51,11 @@
             <div class="card">
                 <div class="card-block">
 
-                  <form method="POST" action"/blogs/{{ $blog->id }}/comments">
+                  <form method="POST" action="/blogs/{{ $blog->id }}/comments">
 
                     {{ csrf_field() }}
 
-                    <input type="hidden" id="user_id" name="user_id" value="1"">
+                    <input type="hidden" id="user_id" name="user_id" value="1"> 
 
                     <div class="form-group">
                       <textarea name="body" id="body" placeholder="Your comment here." class="form-control"></textarea>
