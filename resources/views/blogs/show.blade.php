@@ -1,9 +1,9 @@
-@extends ('layouts.master')
+@extends ('./layouts.master')
 
 @section ('content')
 
 
-	
+
 	<main role="main" class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
@@ -12,17 +12,32 @@
               {{ $blog->titel }}
             </h2>
             <p class="blog-post-meta">
+
+							@if (count($blog->categories))
+								Posted in:
+								@foreach ($blog->categories as $category)
+
+									<a href="/blogs/categories/{{ $category->name }}">
+
+									 {{ $category->name }}
+
+								 	</a>
+
+									@endforeach
+							@endif
+							<br />
+
               updated at
 
-            {{ $blog->updated_at->toFormattedDateString() }} 
+            {{ $blog->updated_at->toFormattedDateString() }}
 
              <br />
              <a href="#">Bart & Esmo </a>
            </p>
 
             {{ $blog->excerp }}
-        
-            {{ $blog->body }} 
+
+            {{ $blog->body }}
 
             <hr>
 
@@ -41,7 +56,7 @@
                   {{ $comment->body }}
 
                 </li>
-              @endforeach  
+              @endforeach
 
               </ul>
             </div>
@@ -55,7 +70,7 @@
 
                     {{ csrf_field() }}
 
-                    <input type="hidden" id="user_id" name="user_id" value="1"> 
+                    <input type="hidden" id="user_id" name="user_id" value="1">
 
                     <div class="form-group">
                       <textarea name="body" id="body" placeholder="Your comment here." class="form-control"></textarea>

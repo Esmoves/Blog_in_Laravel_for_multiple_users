@@ -5,10 +5,12 @@ namespace App;
 
 class Blog extends Model
 {
+
     public function comments()
     {
     	return $this->hasMany(Comment::class)->Latest();
     }
+
 
     public function authors()
     {
@@ -30,6 +32,12 @@ class Blog extends Model
     return $this->belongsToMany(Category::class);
 
   }
+
+  public function create()
+	{
+		$categories = Category::get();
+		return view('blogs.create', compact('categories'));
+	}
 
 
 }

@@ -15,4 +15,16 @@ class CategoryController extends Controller
       return view('blogs.index', compact('blogs'));
 
     }
+
+    public function create()
+    {
+    	$this->validate(request(), [
+			'name' => 'required'
+  		]);
+
+  		Category::create([
+  			'name' => request('category_name'),
+  		]);
+  		return back();
+    }
 }

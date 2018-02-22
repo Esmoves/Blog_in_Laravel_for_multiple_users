@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Blog;
+use App\Category;
 
 class BlogsController extends Controller
 {
@@ -22,9 +23,10 @@ class BlogsController extends Controller
 		}
 
 
-	public function create()
+		public function create()
 		{
-			return view('blogs.create');
+			$categories = Category::get();
+			return view('blogs.create', compact('categories'));
 		}
 
 
@@ -44,6 +46,8 @@ class BlogsController extends Controller
 			$blog->image = $request->image;
 
 			$blog->save();
+
+			$blog->categories()->attach(request('category_id'));
 
 			return redirect("/");
 		}

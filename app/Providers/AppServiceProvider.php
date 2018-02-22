@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer('layouts.sidebar', function ($view) {
-          $view->with('categories', \App\Category::pluck('name'));
+          $view->with('categories', \App\Category::has('blogs')->pluck('name'));
         });
 
     }

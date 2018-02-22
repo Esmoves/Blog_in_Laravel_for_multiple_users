@@ -1,6 +1,6 @@
-@extends ('/layouts.master')
+@extends ('./layouts.master')
 
-@section('content')
+@section ('content')
 	<h1>Add an Article</h1>
 	<form action="/blogs" method="post">
 			{{ csrf_field() }}
@@ -10,20 +10,36 @@
 				<label for="title">Title:</label>
 				<input type="text" id="titel" name="titel" class="form-control">
 			</div>
+
 			<div class="form-group">
-				<label for="excerp">Excerp:</label> 
+
+		  	<label for="category">Category</label>
+		  	<select type="array" class="form-control" id="category_id[]" name="category_id[]" multiple>
+
+						@foreach ($categories as $category)
+
+						<option value="{{ $category->id }}">{{ $category->name }}</option>
+
+		  		@endforeach
+
+				</select>
+
+			</div>
+
+			<div class="form-group">
+				<label for="excerp">Excerp:</label>
 				<input type="textarea" id="excerp" name="excerp" class="form-control">
 			</div>
 			<div class="form-group">
-				<label for="body">Text:</label> 
+				<label for="body">Text:</label>
 				<input type="textarea" id="body" name="body" class="form-control">
-			</div>	
+			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Publish</button>
-			</div>	
-		@include('layouts.errors')	
+			</div>
+		@include('layouts.errors')
 	</form>
 
 
 
-@endsection	
+@endsection
