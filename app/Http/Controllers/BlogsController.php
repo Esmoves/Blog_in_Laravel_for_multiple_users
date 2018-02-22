@@ -22,7 +22,7 @@ class BlogsController extends Controller
 		}
 
 
-	public function create() 
+	public function create()
 		{
 			return view('blogs.create');
 		}
@@ -37,7 +37,7 @@ class BlogsController extends Controller
 			]);
 
 			$blog = new Blog;
-			$blog->user_id = $request->user_id;
+			$blog->author_id = $request->user_id;
 			$blog->titel = $request->titel;
 			$blog->excerp = $request->excerp;
 			$blog->body = $request->body;
@@ -49,4 +49,3 @@ class BlogsController extends Controller
 		}
 
 }
-

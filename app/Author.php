@@ -2,16 +2,16 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Author extends Model
 {
-    public function blogs()
+  public function blogs()
 	{
-		// one author can have many blogs
-		// one blog has one author
-		return $this->hasMany(Blog::class)->Latest();
+		return $this->hasMany(Blog::class);
 	}
+
+  public function getRouteKeyName(){
+    return 'id';
+  }
 
 	public function show()
 	{
