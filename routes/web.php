@@ -11,6 +11,7 @@ Route::get('/blogs/{blog}', 'BlogsController@show');
 
 Route::get('/blogs/authors/{author}', 'AuthorsController@index');
 
+Route::get('/blogs/categories/{category}', 'CategoryController@index');
 
 Route::post('/blogs/{blog}/comments', 'CommentsController@store');
 

@@ -10,7 +10,7 @@ class Author extends Model
 	}
 
   public function getRouteKeyName(){
-    return 'id';
+    return 'username';
   }
 
 	public function show()

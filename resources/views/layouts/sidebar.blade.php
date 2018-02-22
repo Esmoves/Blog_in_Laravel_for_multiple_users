@@ -7,9 +7,39 @@
   <div class="p-3">
     <h4 class="font-italic">Authors</h4>
     <ol class="list-unstyled">
-      <li><a href="./blogs/authors/1">Esmoves</a></li>
-      <li><a href="./blogs/authors/2">Bart</a></li>
-      <li><a href="./blogs/authors/3">Guests</a></li>
+
+      @foreach ($authors as $author)
+
+        <li>
+
+            <a href="/blogs/authors/{{ $author }}">
+
+              {{ $author }}
+
+           </a>
+        </li>
+        @endforeach
+
+
+    </ol>
+  </div>
+
+<div class="p-3">
+  <h4 class="font-italic">Categories</h4>
+  <ol class="list-unstyled">
+
+    @foreach ($categories as $category)
+
+      <li>
+
+          <a href="/blogs/categories/{{ $category }}">
+
+            {{ $category }}
+
+         </a>
+      </li>
+      @endforeach
+
     </ol>
   </div>
 
