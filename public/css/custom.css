@@ -1,0 +1,26 @@
+
+.header {
+
+  width: 100%;
+  
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+  clear: both;
+} 
+
+.sidebar {
+  position: relative;
+  top: 300px;
+  background-color: #cfd1cf;
+  float: left;
+  width: 280px;
+  padding: 10px;
+  margin-right: 10px;
+  margin bottom: 60px;
+
+}
+
+.content {
+  
+
+} 
