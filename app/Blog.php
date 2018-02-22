@@ -12,6 +12,11 @@ class Blog extends Model
     	return $this->hasMany(Comment::class)->Latest();
     }
 
+    public function authors()
+    {
+    	return $this->belongsTo(Author::class);
+    }
+
 
 
     public function addComment($body)
@@ -25,5 +30,6 @@ class Blog extends Model
 	{
 		return $this->belongsTo(Category::class);
 	}
+
 
 }
