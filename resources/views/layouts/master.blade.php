@@ -1,7 +1,36 @@
-	@include('layouts.htmlheader')
-	@include('layouts.nav')
-
-	@yield('content')
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 	
-	@include('layouts.sidebar')
-	@include('layouts.footer')
+	<div class="container">
+		<div class="header" >
+			
+		@include('layouts.htmlheader')
+		
+		@include('layouts.nav')
+			
+		</div>
+
+
+		<div class="sidebar" >
+
+			@include('layouts.sidebar')
+
+		</div>
+
+		<div class="content">
+
+			@yield('content')
+
+		</div>
+
+		@include('layouts.footer')
+
+	</div>
+
+
+</body>
+</html>
