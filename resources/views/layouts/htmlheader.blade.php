@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css.normalize.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="./css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
   </head>
 
   <body>
