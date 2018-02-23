@@ -10,7 +10,7 @@ class CategoryController extends Controller
 
     public function index(Category $category){
 
-      $blogs = $category->blogs;
+      $blogs = $category->blogs()->take(5)->orderBy('id', 'desc')->get();
 
       return view('blogs.multiple', compact('blogs'));
 
@@ -19,14 +19,16 @@ class CategoryController extends Controller
     public function create()
     {
 
-  		$categories = Category::get();
+  		$categories = Category::latest()
+      ->get();
+
       return view('categories.create', compact('categories'));
 
     }
 
     public function store(Category $category)
     {
-      $this->validate(request(), [ 
+      $this->validate(request(), [
                 'name' => 'required|min:2'
             ]);
 
@@ -35,7 +37,7 @@ class CategoryController extends Controller
             $category->name = request()->name;
 
             $category->save();
-            
+
           return back();
 
   }
