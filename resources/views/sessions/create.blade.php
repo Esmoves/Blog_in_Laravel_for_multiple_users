@@ -9,25 +9,32 @@
 			{{csrf_field()}}
 
 
-		<label>User name: </label>
-		<input type="text" name="username"><label>
+			<label>User name: </label>
+			<input type="text" name="username"><label>
 
-			<label>First name: </label>
-			<input type="text" name="firstname">
+				<label>First name: </label>
+				<input type="text" name="firstname">
 
-			<label>Last name: </label>
-			<input type="text" name="lastname">
+				<label>Last name: </label>
+				<input type="text" name="lastname">
 
-			<label>email: </label>
-			<input type="text" name="email">
+				<label>Email: </label>
+				<input type="text" name="email">
 
-			<label>password: </label>
-			<input type="password" name="password">
+				<label>Password: </label>
+				<input type="password" name="password">
 
-			<input type="submit" name="submit">
-		</form >
+				<label>Password conformation: </label>
+				<input type="password" name="password_confirmation">
+
+				<input type="submit" name="submit">
+			</form >
 		</div>
-		@include('layouts.errors')
+		<div>
+			
+			@include('layouts.errors')
+
+		</div>
 	</div>
 
 	@endsection

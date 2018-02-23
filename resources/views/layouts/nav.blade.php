@@ -4,6 +4,15 @@
           <a class="p-2 text-muted" href="#">Subscribe</a>
           <a class="p-2 text-muted" href="/categories/create">Add Category</a>
           <a class="p-2 text-muted" href="/blogs/create">Add Blog</a>
+<<<<<<< HEAD
           <a class="p-2 text-muted" href="#">...</a>
         </nav>
       </div>
+=======
+          <a class="p-2 text-muted" href="#">About</a>
+          @if (Auth::check())
+		 	 <a class="p-2 text-muted ml-auto" href="#">{{Auth::author()->username}}</a>    
+		  @endif    
+		</nav>
+      </div>
+>>>>>>> feature/registration
