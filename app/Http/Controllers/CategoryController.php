@@ -18,13 +18,25 @@ class CategoryController extends Controller
 
     public function create()
     {
-    	$this->validate(request(), [
-			'name' => 'required'
-  		]);
 
-  		Category::create([
-  			'name' => request('category_name'),
-  		]);
-  		return back();
+  		$categories = Category::get();
+      return view('categories.create', compact('categories'));
+
     }
+
+    public function store(Category $category)
+    {
+      $this->validate(request(), [ 
+                'name' => 'required|min:2'
+            ]);
+
+            $category = new Category;
+
+            $category->name = request()->name;
+
+            $category->save();
+            
+          return back();
+
+  }
 }
