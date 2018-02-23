@@ -27,7 +27,7 @@
 			<input type="submit" name="submit">
 		</form >
 		</div>
-
+		@include('layouts.errors')
 	</div>
 
 	@endsection

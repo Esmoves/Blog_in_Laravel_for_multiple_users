@@ -38,10 +38,16 @@ class RegistrationController extends Controller
 
 
 		//create author
-		$author = Author::create(request(['username', 'firstname', 'lastname', 'email', 'password']));
+		$author = Author::create([
+			'username' => request('username'), 
+			'firstname' => request('firstname'), 
+			'lastname' => request('lastname'), 
+			'email' => request('email'), 
+			'password' => \Hash::make(request('password'))
+			]);
 
 		// //login
-		// auth()->login($author);
+		auth()->login($author);
 
 		// redirect to homepage	
 		return redirect()->home();
