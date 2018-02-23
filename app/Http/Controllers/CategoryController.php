@@ -12,7 +12,7 @@ class CategoryController extends Controller
 
       $blogs = $category->blogs;
 
-      return view('blogs.index', compact('blogs'));
+      return view('blogs.multiple', compact('blogs'));
 
     }
 
