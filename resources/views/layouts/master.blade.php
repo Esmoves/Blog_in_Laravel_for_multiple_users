@@ -44,11 +44,6 @@
 
 
 
-		<div class="sidebar" >
-
-			@include('layouts.sidebar')
-
-		</div>
 
 		<div class="content">
 
@@ -60,6 +55,11 @@
 
 	</div>
 
+		<div class="sidebar" >
+
+			@include('layouts.sidebar')
+
+		</div> 
 
 </body>
 </html>
