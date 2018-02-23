@@ -13,5 +13,13 @@ class SessionsController extends Controller
 
     }
 
-    
+    public function destroy(Request $request)
+ 
+    {
+
+    	auth()->logout();
+    	return redirect()->home();
+    	
+
+    }
 }

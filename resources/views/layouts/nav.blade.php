@@ -5,5 +5,8 @@
           <a class="p-2 text-muted" href="/register">Admin</a>
           <a class="p-2 text-muted" href="/blogs/create">Add Blog</a>
           <a class="p-2 text-muted" href="#">About</a>
-        </nav>
+          @if (Auth::check())
+		 	 <a class="p-2 text-muted ml-auto" href="#">{{Auth::author()->username}}</a>    
+		  @endif    
+		</nav>
       </div>
