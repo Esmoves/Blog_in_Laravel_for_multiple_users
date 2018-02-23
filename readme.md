@@ -5,6 +5,7 @@
 <p>This blog is developed by Esmeralda Tijhoff and Bart Knot in February 2018 as part of the bootcamp by CodeGorilla.</p>
 <p>Visit the blog at Heroku: <a href='http://secure-cliffs-14197.herokuapp.com/index.ph' target='blank'>Baes Blog on Heroku</a></p>
 <p>Check out the code on Github: <a href="https://github.com/Esmoves/laravel_blog_2" target='blank'>Baes Blog on Github</a></p>
+<p>Visit our Trello board to look at our workflow: <a href="https://trello.com/b/9dESllEM" target="blank">Trello board</a></p>
 
 <h2>Blogger</h2>
 <p>The blogger can upload a blog and attach multiple categories to her/his article. To use this functionality, the blogger can click on the 'Add blog' button in the top menu.</p>
