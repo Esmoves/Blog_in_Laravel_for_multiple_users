@@ -1,5 +1,5 @@
 <aside class="blog-sidebar">
-  <div>
+  <div class="p-3">
     <h4 class="font-italic">About</h4>
     <p class=>This blog is developed by Esmeralda Tijhoff and Bart Knot for CodeGorilla in februari 2018.</p>
   </div>

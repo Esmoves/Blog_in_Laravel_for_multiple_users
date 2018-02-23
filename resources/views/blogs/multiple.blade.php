@@ -1,14 +1,6 @@
-@extends ('/layouts.masterindex')
+@extends ('/layouts.mastermultiple')
 
 @section('content')
-
-      <div class="jumbotron p-3 p-md-3 text-white rounded bg-dark">
-        <div class=".col-6 px-0">
-          <h1 class="display-4 font-italic">BaEs blog</h1>
-          <p class="lead my-3">Welcome on this blog for and by developers. Stay tuned!</p>
-          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-        </div>
-      </div>
 
     <main role="main" class="container">
       <div class="row">

@@ -1,15 +1,19 @@
-@extends ('./layouts.master')
+@extends ('/layouts.master')
 
-@section ('content')
+@section('content')
 
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-10 blog-main">
+			<h3 class="pb-3 mb-4 font-italic border-bottom">
+				From our reporters!
+			</h3>
 
-
-	<main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8 blog-main">
           <div class="blog-post">
             <h2 class="blog-post-title">
+
               {{ $blog->titel }}
+
             </h2>
             <p class="blog-post-meta">
 
@@ -36,6 +40,8 @@
            </p>
 
             {{ $blog->excerp }}
+
+						<hr>
 
             {{ $blog->body }}
 

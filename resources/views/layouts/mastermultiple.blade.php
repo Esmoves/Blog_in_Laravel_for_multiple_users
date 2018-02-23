@@ -9,14 +9,14 @@
     <title>Blog in Laravel</title>
 
     <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Normalize -->
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
 
     <!-- Template and Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
   </head>
 
   <body>
@@ -39,3 +39,27 @@
           </div>
         </div>
       </header>
+
+		@include('../layouts.nav')
+
+
+
+		<div class="sidebar" >
+
+			@include('layouts.sidebar')
+
+		</div>
+
+		<div class="content">
+
+			@yield('content')
+
+		</div>
+
+		@include('layouts.footer')
+
+	</div>
+
+
+</body>
+</html>

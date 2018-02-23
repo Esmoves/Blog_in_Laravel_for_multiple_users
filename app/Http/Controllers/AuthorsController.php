@@ -11,7 +11,7 @@ class AuthorsController extends Controller
     {
       $blogs = $author->blogs;
 
-      return view('blogs.index', compact('blogs'));
+      return view('blogs.multiple', compact('blogs'));
 
     }
 }
