@@ -4,6 +4,6 @@
           <a class="p-2 text-muted" href="#">Subscribe</a>
           <a class="p-2 text-muted" href="/categories/create">Add Category</a>
           <a class="p-2 text-muted" href="/blogs/create">Add Blog</a>
-          <a class="p-2 text-muted" href="#">About</a>
+          <a class="p-2 text-muted" href="#">...</a>
         </nav>
       </div>
