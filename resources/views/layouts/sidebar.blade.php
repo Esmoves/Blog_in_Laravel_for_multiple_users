@@ -44,21 +44,11 @@
   </div>
 
   <div class="p-3">
-    <h4 class="font-italic">Archives</h4>
-    <ol class="list-unstyled mb-0">
-      <li><a href="#">March 2014</a></li>
-      <li><a href="#">February 2014</a></li>
-      <li><a href="#">January 2014</a></li>
-
-    </ol>
-  </div>
-
-  <div class="p-3">
     <h4 class="font-italic">Elsewhere</h4>
     <ol class="list-unstyled">
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">Heroku</a></li>
-      <li><a href="www.wijzijncodegorilla.nl" target="_blank">CodeGorilla</a></li>
+      <li><a href="https://github.com/Esmoves/laravel_blog_2" target="_blank">GitHub</a></li>
+      <li><a href="https://secure-cliffs-14197.herokuapp.com" target="_blank">Heroku</a></li>
+      <li><a href="http://www.wijzijncodegorilla.nl" target="_blank">CodeGorilla</a></li>
     </ol>
   </div>
 </aside><!-- /.blog-sidebar -->
