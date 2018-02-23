@@ -30,7 +30,7 @@ class RegistrationController extends Controller
 
 			'lastname' => 'required', 
 
-			'email' => 'required',
+			'email' => 'required|email',
 
 			'password' => 'required'
 		
@@ -40,8 +40,12 @@ class RegistrationController extends Controller
 		//create author
 		$author = Author::create(request(['username', 'firstname', 'lastname', 'email', 'password']));
 
-		//login
-		auth()->login($author);
+		// //login
+		// auth()->login($author);
+
+		// redirect to homepage	
+		return redirect()->home();
+
 
 	
 
