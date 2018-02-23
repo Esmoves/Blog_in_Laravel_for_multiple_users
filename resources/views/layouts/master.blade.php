@@ -42,7 +42,12 @@
 
 		@include('../layouts.nav')
 
+    
+    		<div class="sidebar">
 
+    			@include('layouts.sidebar')
+
+    		</div>
 
 
 		<div class="content">
@@ -54,12 +59,6 @@
 		@include('layouts.footer')
 
 	</div>
-
-		<div class="sidebar" >
-
-			@include('layouts.sidebar')
-
-		</div> 
 
 </body>
 </html>
