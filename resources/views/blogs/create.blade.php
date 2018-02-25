@@ -7,10 +7,24 @@
 		<div class="col-md-10 blog-main">
 			<h3 class="pb-3 mb-4 font-italic border-bottom">
 					Add an Article</h3>
-					
+
 			<form action="/blogs" method="post">
 					{{ csrf_field() }}
-					<input type="hidden" id="user_id" name="user_id" value="1">
+
+					<div class="form-group">
+
+				  	<label for="user_id">Author</label>
+				  	<select type="array" class="form-control" id="user_id" name="user_id">
+
+								@foreach ($authors as $author)
+
+								<option value="{{ $author->id }}">{{ $author->username }}</option>
+
+				  		@endforeach
+
+						</select>
+
+					</div>
 					<input type="hidden" id="image" name="image" value="12345">
 					<div class="form-group">
 						<label for="title">Title:</label>

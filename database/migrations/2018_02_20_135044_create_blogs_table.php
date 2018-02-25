@@ -15,7 +15,7 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function(Blueprint $table){
             $table->increments('id');
-            $table->integer('author_id');
+            $table->integer('user_id');
             $table->string('titel');
             $table->text('excerp');
             $table->text('body');
@@ -23,7 +23,7 @@ class CreateBlogsTable extends Migration
             $table->boolean('hidden')->default(false);
             $table->timestamps();
         });
-    
+
     }
 
     /**

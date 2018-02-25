@@ -28,7 +28,6 @@ class Author extends User
 	public function show()
 	{
 		// get the blogs for one author
-		//$blog->author()->attach($author_id)
+		$blog->author()->attach($author_id);
 	}
 }
-

@@ -17,13 +17,11 @@
               </a>
             </h2>
 
-            <p class="blog-post-meta">updated at
+            <p class="blog-post-meta"> updated at ...
 
-            {{ $blog->updated_at->toFormattedDateString() }}
 
-            <br />
 
-            <a href="#">Bart & Esmo</a>
+
 
             </p>
 

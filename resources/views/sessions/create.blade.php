@@ -1,33 +1,48 @@
 @extends ('./layouts.master')
 
 @section ('content')
-<div>
-	<h1>register Author</h1>
-	<div class="form-group">
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-10 blog-main">
+			<h3 class="pb-3 mb-4 font-italic border-bottom">
+					Register Author
+			</h3>
 
-		<form method="POST" action="/register">
-			{{csrf_field()}}
+			<form method="POST" action="/register">
+				{{ csrf_field() }}
 
+				<div class='form-group'>
+						<label>User name: </label>
+						<input type="text" name="username" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<label>First name: </label>
+							<input type="text" name="firstname" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<label>Last name: </label>
+							<input type="text" name="lastname" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<label>Email: </label>
+							<input type="email" name="email" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<label>Password: </label>
+							<input type="password" name="password" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<label for="password_confirmation">Confirm Password: </label>
+							<input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
+				</div>
+				<div class='form-group'>
+							<input type="submit" name="submit" class="btn btn-primary" value="Register">
+				</div>
+			</form >
 
-		<label>User name: </label>
-		<input type="text" name="username"><label>
-
-			<label>First name: </label>
-			<input type="text" name="firstname">
-
-			<label>Last name: </label>
-			<input type="text" name="lastname">
-
-			<label>email: </label>
-			<input type="text" name="email">
-
-			<label>password: </label>
-			<input type="password" name="password">
-
-			<input type="submit" name="submit">
-		</form >
-		</div>
 		@include('layouts.errors')
 	</div>
+</div>
+</main>
 
 	@endsection

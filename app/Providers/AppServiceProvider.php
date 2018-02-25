@@ -15,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
+        Schema::defaultStringLength(191);
+
         view()->composer('layouts.sidebar', function ($view) {
           $view->with('authors', \App\Author::pluck('username'));
         });

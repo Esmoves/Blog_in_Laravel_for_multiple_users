@@ -8,13 +8,13 @@
     <h4 class="font-italic">Authors</h4>
     <ol class="list-unstyled">
 
-      @foreach ($authors as $author)
+      @foreach ($authors as $user)
 
         <li>
 
-            <a href="/blogs/authors/{{ $author }}">
+            <a href="/blogs/authors/{{ $user }}">
 
-              {{ $author }}
+              {{ $user }}
 
            </a>
         </li>

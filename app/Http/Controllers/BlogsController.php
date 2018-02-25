@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Blog;
 use \App\Category;
+use \App\Author;
 
 class BlogsController extends Controller
 {
+
+	public function __construct()
+	{
+
+		$this->middleware('auth')->except(['index', 'show', 'create', 'store']);
+
+	}
+
+
 	public function index()
 		{
 			$blogs = Blog::latest()
@@ -26,7 +36,8 @@ class BlogsController extends Controller
 		public function create()
 		{
 			$categories = Category::get();
-			return view('blogs.create', compact('categories'));
+			$authors = Author::get();
+			return view('blogs.create', compact('categories', 'authors'));
 		}
 
 
@@ -39,7 +50,7 @@ class BlogsController extends Controller
 			]);
 
 			$blog = new Blog;
-			$blog->author_id = $request->user_id;
+			$blog->user_id = $request->user_id;
 			$blog->titel = $request->titel;
 			$blog->excerp = $request->excerp;
 			$blog->body = $request->body;

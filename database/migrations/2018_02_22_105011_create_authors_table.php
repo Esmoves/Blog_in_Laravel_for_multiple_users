@@ -21,13 +21,14 @@ class CreateAuthorsTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('hidden')->default(false);
+            $table->rememberToken();
             $table->timestamps();
         });
 
         Schema::create('author_blog', function(Blueprint $table){
             $table->integer('author_id');
-            $table->integer('blog_id');     
-            $table->primary(['author_id', 'blog_id']);  
+            $table->integer('blog_id');
+            $table->primary(['author_id', 'blog_id']);
         });
     }
 
