@@ -1,40 +1,43 @@
-@extends ('./layouts.master')
+ @extends ('./layouts.master')
 
-@section ('content')
-<div>
-	<h1>register Author</h1>
-	<div class="form-group">
+ @section ('content')
 
-		<form method="POST" action="/register">
-			{{csrf_field()}}
+ <main role="main" class="container">
+  <div class="row">
+    <div class="col-md-10 blog-main">
+      <h3 class="pb-3 mb-4 font-italic border-bottom">
+      Register Author</h3>
+
+      <form method="POST" action="/register">
+          {{csrf_field()}}
 
 
-			<label>User name: </label>
-			<input type="text" name="username"><label>
+          <label>User name: </label><br />
+          <input class="form-control" type="text" name="username" required><br />
 
-				<label>First name: </label>
-				<input type="text" name="firstname">
+          <label>First name: </label><br />
+          <input class="form-control" type="text" name="firstname" required><br />
 
-				<label>Last name: </label>
-				<input type="text" name="lastname">
+          <label>Last name: </label><br />
+          <input class="form-control" type="text" name="lastname" required><br />
 
-				<label>Email: </label>
-				<input type="text" name="email">
+          <label>email: </label><br />
+          <input class="form-control " type="email" name="email" required><br />
 
-				<label>Password: </label>
-				<input type="password" name="password">
+          <label>password: </label><br />
+          <input class="form-control" type="password" name="password" required><br />
 
-				<label>Password conformation: </label>
-				<input type="password" name="password_confirmation">
+          <label>password: </label><br />
+          <input class="form-control" type="password" name="password_confirmation" required><br />
 
-				<input type="submit" name="submit">
-			</form >
-		</div>
-		<div>
-			
-			@include('layouts.errors')
 
-		</div>
-	</div>
+          <input class="form-control" type="submit" name="submit">
+      </form >
+  </div>
+  @include('layouts.errors')
+</div>
 
-	@endsection
+
+@endsection
+
+
